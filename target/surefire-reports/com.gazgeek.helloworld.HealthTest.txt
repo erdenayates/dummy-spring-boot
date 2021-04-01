@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.gazgeek.helloworld.HealthTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.15 sec - in com.gazgeek.helloworld.HealthTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.891 sec - in com.gazgeek.helloworld.HealthTest
