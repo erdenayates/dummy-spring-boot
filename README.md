@@ -6,7 +6,7 @@ In that project i have used;
 - Kubernetes for container orchestration.
 - Ansible could be using for running the commands such as "docker push, kubectl rollout ..." but i used some Bash scripts for that steps.
 
-##Jenkins
+## Jenkins
 Jenkins is a great tool for CI/CD pipeline, in that project i have used Jenkins with crontab. Using crontab allows to us checking the Github repo in some periods. There could be a webhook between Github and Jenkins job but my Jenkins is running on my local machine because of that Jenkins is not able to have some triggers from outside.
 
 #Docker 
