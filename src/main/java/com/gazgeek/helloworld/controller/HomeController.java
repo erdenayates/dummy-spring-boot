@@ -8,7 +8,7 @@ public class HomeController {
 
     @RequestMapping("/")
     String home() {
-        return "Hello from bestcloudforme!";
+        return "Hello from bestcloudforme! It is a ingress test";
     }
 
 }
