@@ -1,0 +1,9 @@
+---
+- name: Update the new version of containers 
+  hosts: kubernetes 
+  become: true
+  user: root
+  
+  tasks:
+  - name: Update the deployment if image is updated
+    command: kubectl rollout restart deployment bestcloudforme

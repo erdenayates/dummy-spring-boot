@@ -1,0 +1,26 @@
+---
+- hosts: docker
+  become: true
+  tasks:
+  - name: Remove the old image
+    command: docker rmi -f erdates/bestcloudforme
+    ignore_errors: yes
+
+  - name: Build the new image
+    command: docker build -f Dockerfile -t erdates/bestcloudforme .
+    ignore_errors: yes
+
+  - name: Remove the old container
+    command: docker rm -f hello-bestcloudforme
+    ignore_errors: yes
+
+  - name: Run new container with new image
+    command: docker run --name hello-bestcloudforme -d -p 80:8080 erdates/bestcloudforme
+    args:
+      chdir: /opt/docker
+
+  - name: Login to Dockerhub for push
+    command: docker login -u erdates -p $PASSWORD
+  
+  - name: Push the new image
+    command: docker push erdates/bestcloudforme
